@@ -17,7 +17,8 @@ import {
   Timeline,
   TimelineItem,
   Card,
-  Tag
+  Tag,
+  tooltip
 } from "element-ui";
 import CollapseTransition from "element-ui/lib/transitions/collapse-transition";
 
@@ -38,7 +39,8 @@ import CollapseTransition from "element-ui/lib/transitions/collapse-transition";
   Timeline,
   TimelineItem,
   Card,
-  Tag
+  Tag,
+  tooltip
 ].map(cpt => {
   Vue.component(cpt.name, cpt);
 });

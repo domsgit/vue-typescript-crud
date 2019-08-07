@@ -12,7 +12,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
     (this as any).getPayloads();
   }
 })
-export default class HelloWorld extends Vue {
+export default class AboutPage extends Vue {
   // @Prop() private title!: string;
   title: string = "about";
   getPayloads(): any {

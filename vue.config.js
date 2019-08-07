@@ -1,5 +1,6 @@
 const path = require("path");
-const sourceMap = process.env.NODE_ENV === "development";
+// const webpack = require("webpack");
+const isDev = process.env.NODE_ENV === "development";
 
 module.exports = {
   publicPath: "./",
@@ -21,18 +22,17 @@ module.exports = {
           vue$: "vue/dist/vue.js",
           "@": path.resolve(__dirname, "./src"),
           "@c": path.resolve(__dirname, "./src/components"),
-          utils: path.resolve(__dirname, "./src/utils"),
-          less: path.resolve(__dirname, "./src/less"),
-          views: path.resolve(__dirname, "./src/views"),
-          assets: path.resolve(__dirname, "./src/assets"),
-          com: path.resolve(__dirname, "./src/components"),
-          store: path.resolve(__dirname, "./src/store"),
-          mixins: path.resolve(__dirname, "./src/mixins")
+          "@l": path.resolve(__dirname, "./src/layouts"),
+          "@u": path.resolve(__dirname, "./src/utils"),
+          "@v": path.resolve(__dirname, "./src/views"),
+          "@a": path.resolve(__dirname, "./src/assets"),
+          "@s": path.resolve(__dirname, "./src/store"),
+          "@m": path.resolve(__dirname, "./src/models")
         }
       }
     });
   },
-  productionSourceMap: sourceMap,
+  productionSourceMap: isDev,
   css: {
     extract: true,
     sourceMap: false,
