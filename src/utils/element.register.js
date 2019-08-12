@@ -18,7 +18,17 @@ import {
   TimelineItem,
   Card,
   Tag,
-  tooltip
+  Tooltip,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Footer,
+  Breadcrumb,
+  BreadcrumbItem,
+  Table,
+  TableColumn,
+  Pagination
 } from "element-ui";
 import CollapseTransition from "element-ui/lib/transitions/collapse-transition";
 
@@ -40,7 +50,17 @@ import CollapseTransition from "element-ui/lib/transitions/collapse-transition";
   TimelineItem,
   Card,
   Tag,
-  tooltip
+  Tooltip,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Footer,
+  Breadcrumb,
+  BreadcrumbItem,
+  Table,
+  TableColumn,
+  Pagination
 ].map(cpt => {
   Vue.component(cpt.name, cpt);
 });

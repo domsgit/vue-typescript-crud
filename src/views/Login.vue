@@ -111,5 +111,10 @@ export default class LoginPage extends Vue {
   & .center {
     text-align: center;
   }
+  /deep/ .el-input-group__append,
+  /deep/ .el-input-group__prepend {
+    background-color: transparent;
+    border: none;
+  }
 }
 </style>
