@@ -3,12 +3,12 @@ import axios from "axios";
 let https: any = {};
 if (process.env.NODE_ENV === "development") {
   https = axios.create({
-    baseURL: "/api",
+    baseURL: "/api/api",
     timeout: 50000
   });
 } else {
   https = axios.create({
-    baseURL: "/api",
+    baseURL: "/api/api",
     timeout: 50000
   });
 }

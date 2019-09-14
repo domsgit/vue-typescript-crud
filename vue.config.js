@@ -45,6 +45,7 @@ module.exports = {
   // see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
   pwa: {},
   devServer: {
+    hot: true,
     open: process.platform === "darwin",
     host: "localhost",
     port: 8080,

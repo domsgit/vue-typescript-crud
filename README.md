@@ -67,3 +67,8 @@ yarn run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## 相关文档
+
+[vuex](https://vuex.vuejs.org)

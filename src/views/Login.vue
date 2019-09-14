@@ -30,7 +30,7 @@
                   slot="append"
                   class="item"
                   effect="dark"
-                  content="账号为3-10位"
+                  content="账号为3-25位"
                   placement="top-end"
                 >
                   <el-button icon="el-icon-info"></el-button>
@@ -49,7 +49,7 @@
                   slot="append"
                   class="item"
                   effect="dark"
-                  content="密码为3-10位"
+                  content="密码为3-25位"
                   placement="top-end"
                 >
                   <el-button icon="el-icon-info"></el-button>
@@ -70,6 +70,9 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { FormLogin } from "@/models/index";
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
+
+const { log, error } = console;
 
 @Component
 export default class LoginPage extends Vue {
@@ -80,15 +83,26 @@ export default class LoginPage extends Vue {
   rules = {
     userName: [
       { required: true, message: "请输入账号", trigger: "blur" },
-      { min: 3, max: 5, message: "长度在 3 到 10 个字符", trigger: "blur" }
+      { min: 3, max: 25, message: "长度在 3 到 25 个字符", trigger: "blur" }
     ],
     password: [
       { required: true, message: "请输入密码", trigger: "blur" },
-      { min: 3, max: 5, message: "长度在 3 到 10 个字符", trigger: "blur" }
+      { min: 3, max: 25, message: "长度在 3 到 25 个字符", trigger: "blur" }
     ]
   };
   login() {
     console.log("login", this.formLogin);
+    const { password, userName } = this.formLogin;
+    (this as any).$http.post(this.$urls.login, {
+      user: {
+        password,
+        email: userName
+      }
+    })
+      .then((res: any) => {
+        log(res)
+      })
+      .catch(error)
   }
   register() {
     // router to register page

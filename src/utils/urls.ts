@@ -1,8 +1,9 @@
 // url的链接
 export const urls: object = {
-  login: "login",
+  login: "users/login",
   logout: "logout",
-  register: "register"
+  register: "register",
+  companies: "companies"
 };
 
 export default urls;
