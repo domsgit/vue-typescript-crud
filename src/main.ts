@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Component from "vue-class-component";
+import "./utils/class-component-hooks";
 import App from "./App.vue";
 import router from "./router";
 import store from "./stores";

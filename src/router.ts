@@ -15,7 +15,13 @@ export default new Router({
       path: "/Login",
       name: "Login",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Login.vue")
+        import(/* webpackChunkName: "login" */ "./views/Login.vue")
+    },
+    {
+      path: "/Register",
+      name: "Register",
+      component: () =>
+        import(/* webpackChunkName: "register" */ "./views/Register.vue")
     },
     {
       path: "/Common",
@@ -35,7 +41,7 @@ export default new Router({
           path: "/CrudDemo",
           name: "CrudDemo",
           component: () =>
-            import(/* webpackChunkName: "CrudDemo" */ "./views/CrudDemo.vue")
+            import(/* webpackChunkName: "crudDemo" */ "./views/CrudDemo.vue")
         }
       ]
     }

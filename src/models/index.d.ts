@@ -1,3 +1,3 @@
-import FormLogin from "./FormLogin";
+import FormLoginRegister from "./FormLoginRegister";
 
-export { FormLogin };
+export { FormLoginRegister };

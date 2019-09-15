@@ -72,3 +72,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## 相关文档
 
 [vuex](https://vuex.vuejs.org)
+[vue-router](https://router.vuejs.org)
