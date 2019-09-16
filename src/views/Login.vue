@@ -69,7 +69,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { FormLoginRegister } from "@/models/index";
-import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
+import { mapState, mapGetters, mapMutations, mapActions } from "vuex";
 import { removeNull } from "../utils/common";
 
 const { log, error } = console;
@@ -91,32 +91,34 @@ export default class LoginPage extends Vue {
     ]
   };
   mounted() {
-    log(this.$route.params)
+    log(this.$route.params);
   }
   login() {
     console.log("login", this.formLogin);
     const { password, email } = this.formLogin;
 
-    (this.$refs.ruleForm as any).validate((valid:any) => {
+    (this.$refs.ruleForm as any).validate((valid: any) => {
       if (valid) {
-        (this as any).$http.post(this.$urls.login, {
-          user: {
-            password,
-            email
-          }
-        })
-          .then((res: any) => {
-            log(res)
+        (this as any).$http
+          .post(this.$urls.login, {
+            user: {
+              password,
+              email
+            }
           })
-          .catch(error)
+          .then((res: any) => {
+            log(res);
+            this.$router.push({ name: "About", params: {} });
+          })
+          .catch(error);
       } else {
-        console.log('error submit!!');
+        console.log("error submit!!");
         return false;
       }
     });
   }
   register() {
-    this.$router.push({ name: 'Register', params: removeNull(this.formLogin)});
+    this.$router.push({ name: "Register", params: removeNull(this.formLogin) });
   }
 }
 </script>
