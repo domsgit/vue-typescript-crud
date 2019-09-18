@@ -1,9 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
+import { Message } from "element-ui";
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
@@ -16,6 +17,12 @@ export default new Router({
       name: "Login",
       component: () =>
         import(/* webpackChunkName: "login" */ "./views/Login.vue")
+    },
+    {
+      path: "/NotFound",
+      name: "NotFound",
+      component: () =>
+        import(/* webpackChunkName: "notFound" */ "./views/NotFound.vue")
     },
     {
       path: "/Register",
@@ -44,6 +51,33 @@ export default new Router({
             import(/* webpackChunkName: "crudDemo" */ "./views/CrudDemo.vue")
         }
       ]
-    }
+    },
+    {
+      path: "*",
+      redirect: "/NotFound"
+    },
   ]
 });
+
+router.beforeEach((to, from, next) => {
+  console.log('to: ', to, 'from: ', from)
+  const toPath = to.path;
+
+  if(toPath !== '/' && toPath !== '/Login' && toPath !== '/Register') {
+    const token = localStorage.getItem('token');
+    if(!token) {
+      Message({
+        type: 'warning',
+        message: '您还没有登录，请登录！'
+      });
+      next('/Login');
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+
+})
+
+export default router;

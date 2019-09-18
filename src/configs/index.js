@@ -3,7 +3,7 @@ const config = {
 };
 
 if (process.env.NODE_ENV === "development") {
-  config.url = "http://localhost:8080";
+  config.url = "/api/api";
 }
 
 export default config;

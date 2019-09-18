@@ -1,7 +1,9 @@
 <template>
   <div class="Layout">
     <el-container class="container">
-      <el-header>Header</el-header>
+      <el-header>
+        <Head></Head>
+      </el-header>
       <el-container>
         <el-aside width="100px">Aside</el-aside>
         <el-container>
@@ -26,8 +28,13 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import Head from './Head.vue';
 
-@Component
+@Component({
+  components: {
+    Head
+  }
+})
 export default class Layout extends Vue {
   currentYear: number = new Date().getFullYear();
 }
@@ -39,6 +46,10 @@ export default class Layout extends Vue {
   height: 100%;
   .container {
     height: 100%;
+    // 覆写element ui样式
+    .el-header {
+      padding: 0px;
+    }
   }
   .copyright {
     line-height: 60px;

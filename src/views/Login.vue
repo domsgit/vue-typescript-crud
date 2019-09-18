@@ -108,9 +108,22 @@ export default class LoginPage extends Vue {
           })
           .then((res: any) => {
             log(res);
-            this.$router.push({ name: "About", params: {} });
+            const {
+              data: {
+                user: { token }
+              }
+            } = res;
+            if (token) {
+              localStorage.setItem("token", token);
+              this.$router.push({ name: "CrudDemo", params: {} });
+            }
           })
-          .catch(error);
+          .catch((error: any) => {
+            const {response: {status}} = error;
+            console.log(error)
+            console.log(status)
+            
+          });
       } else {
         console.log("error submit!!");
         return false;
