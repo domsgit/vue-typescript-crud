@@ -48,13 +48,14 @@ module.exports = {
     hot: true,
     open: process.platform === "darwin",
     host: "localhost",
-    port: 8080,
+    port: 4000,
     https: false,
     hotOnly: false,
     proxy: {
       // proxy all requests starting with /api to jsonplaceholder
       "/api": {
-        target: "http://localhost:3000/",
+        // target: "http://localhost:3000/",
+        target: "http://129.204.143.28:3000/",
         changeOrigin: true,
         ws: true,
         pathRewrite: {

@@ -1,5 +1,5 @@
 const config = {
-  url: "http://localhost:8080"
+  url: "http://129.204.143.28:3000"
 };
 
 if (process.env.NODE_ENV === "development") {

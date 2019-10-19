@@ -1,6 +1,6 @@
 # vue-typescript-crud
 
-> 以 Vue 为基础架构实现后台系统的 CRUD。
+> 以 Vue 为基础架构实现后台系统的 CRUD。[点此在线预览](http://129.204.143.28:4000)
 
 ## my setup & skeleton
 
