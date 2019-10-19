@@ -1,6 +1,7 @@
 # vue-typescript-crud
 
 > 以 Vue 为基础架构实现后台系统的 CRUD。[点此在线预览](http://129.204.143.28:4000)
+> 本项目使用的后台服务项目：[nestjs-crud](https://github.com/domsgit/nestjs-crud)，[后端服务在线预览swagger api](http://129.204.143.28:3000/docs)
 
 ## my setup & skeleton
 
