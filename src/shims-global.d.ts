@@ -1,4 +1,4 @@
-declare var window: Window;
+declare var window: Window & typeof globalThis;
 declare var document: Document;
 declare var THREE: any;
 
