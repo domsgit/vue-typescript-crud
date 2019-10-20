@@ -136,7 +136,7 @@ export default class LoginPage extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="less">
 .login-page {
   padding: 1rem;
   box-sizing: border-box;

@@ -22,7 +22,7 @@ import Layout from "./Layout.vue";
 export default class Common extends Vue {}
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="less">
 .common {
   width: 100%;
   height: 100%;

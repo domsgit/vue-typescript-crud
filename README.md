@@ -15,7 +15,7 @@ npx vue create vue-typescript-crud
 - Use class-style component syntax? Yes
 - Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
 - Use history mode for router? (Requires proper server setup for index fallback in production) Yes
-- Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with node-sass)
+- Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Less
 - Pick a linter / formatter config: Prettier
 - Pick additional lint features: Lint on save
 - Pick a unit testing solution: Mocha

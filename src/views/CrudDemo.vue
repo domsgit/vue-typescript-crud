@@ -106,20 +106,20 @@ export default class CrudDemoPage extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
-$partMarginTop: 1rem;
+<style scoped lang="less">
+@partMarginTop: 1rem;
 
 .partMarginTop {
-  margin-top: $partMarginTop;
+  margin-top: @partMarginTop;
 }
 .operation {
-  @extend .partMarginTop;
+  &:extend(.partMarginTop);
 }
 .table {
-  margin-top: $partMarginTop;
+  margin-top: @partMarginTop;
 }
 .pagination {
   text-align: center;
-  margin-top: $partMarginTop;
+  margin-top: @partMarginTop;
 }
 </style>

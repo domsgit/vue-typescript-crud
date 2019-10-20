@@ -168,7 +168,7 @@ export default class RegisterPage extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="less">
 .register-page {
   padding: 1rem;
   box-sizing: border-box;

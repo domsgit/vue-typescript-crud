@@ -24,7 +24,7 @@ export default class AboutPage extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="less">
 h1 {
   margin: 40px 0 0;
   color: green;

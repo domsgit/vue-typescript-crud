@@ -40,7 +40,7 @@ export default class Layout extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="less">
 .Layout {
   width: 100%;
   height: 100%;

@@ -16,8 +16,8 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 export default class App extends Vue {}
 </script>
 
-<style lang="scss">
-@import url("./assets/css/common.scss");
+<style lang="less">
+@import url("./assets/css/common.less");
 #app {
   width: 100%;
   height: 100%;
